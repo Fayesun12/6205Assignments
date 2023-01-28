@@ -1,0 +1,6 @@
+Pave the way for the double pointer method: first sort the given a
+The idea of the double pointer method: The pointer j of the middle number in the fixed pointer, the double pointer i, k are set at both ends of j, and the double pointers are alternately moved to the middle, and record all the conditions that satisfy a[k] + a[ for each fixed pointer j i] + a[j] == 0 j, k combination:
+When i < j and k > j, loop to calculate sum = a[k] + a[i] + a[j], and perform double pointer movement according to the following rules:
+When sum < 0, i += 1 and skip all repeated a[i];
+When sum > 0, k-= 1 and skip all repeated a[k];
+When s == 0, record the combination [i, j, k] to Triples, execute i += 1 and k-= 1 and skip all repeated a[i] and a[j] to prevent recording to repeated combinations .
